@@ -81,3 +81,44 @@ traffic-sign-recognition/
    ```bash
    git clone <https://github.com/DanMcwood/traffic-sign-recognition>
    cd traffic-sign-recognition
+
+2. Создайте виртуальное окружение и активируйте его:
+
+Для Windows:
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+Для Linux / macOS:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+Установите все необходимые зависимости и библиотеки:
+```
+Установите все необходимые зависимости и библиотеки:
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+2. Подготовка весов моделей
+Перед запуском приложения убедитесь, что файлы обученных моделей находятся в локальной папке проекта. Приложение автоматически подгружает их из директории models/.
+
+Рекомендуемая структура папок должна выглядеть следующим образом:
+
+Plaintext
+traffic-sign-recognition/
+├── app.py
+├── requirements.txt
+└── models/
+    ├── yolo_traffic_fixed.pt   # Веса детектора YOLO
+    └── best_model.pth           # Веса классификатора MobileNetV3-Small
+3. Запуск веб-демо
+Для запуска демонстрационного модуля локального веб-интерфейса на базе Gradio выполните команду:
+
+Bash
+python app.py
+После успешной инициализации моделей в консоли появятся ссылки:
+
+Local URL: http://127.0.0.1:7860 — для открытия интерфейса в браузере на локальном компьютере.
+
+Public URL (Gradio Share): временная публичная ссылка вида https://*.gradio.live, с помощью которой к вашему демонстрационному приложению можно удаленно подключиться с любого устройства.
