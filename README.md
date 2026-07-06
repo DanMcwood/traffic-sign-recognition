@@ -79,5 +79,5 @@ traffic-sign-recognition/
 
 1. Склонируйте репозиторий и перейдите в корневую директорию проекта:
    ```bash
-   git clone <url_вашего_репозитория>
+   git clone <https://github.com/DanMcwood/traffic-sign-recognition>
    cd traffic-sign-recognition
